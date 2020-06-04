@@ -155,8 +155,8 @@ let DiagnosticLog = {
             }
         })
     },
-    generateSnapshotFilename: (file, midfix = "", snapshotDir = "cache/logs") => {
-        return path.join(snapshotDir, `${new Date().getTime()}-${midfix.length === 0 ? "" : midfix + "-"}` + path.basename(file))
+    generateSnapshotFilename: (file, postfix = "", snapshotDir = "cache/logs") => {
+        return path.join(snapshotDir, path.basename(file).replace(".log", "") + `${postfix.length === 0 ? "" : "-" + postfix}` + ".log")
     },
     snapshotLogFile: (file, midfix = "", snapshotDir = "cache/logs") => {
         return new Promise((resolve, reject) => {
