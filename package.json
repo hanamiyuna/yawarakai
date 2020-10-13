@@ -23,7 +23,8 @@
   "homepage": "https://github.com/hanamiyuna/yawarakai#readme",
   "resolutions": {
     "minimist": "^1.2.2",
-    "acorn": ">=7.1.1"
+    "acorn": ">=7.1.1",
+    "node-fetch": "^2.6.1"
   },
   "dependencies": {
     "@tensorflow/tfjs": "^1.2.9",
